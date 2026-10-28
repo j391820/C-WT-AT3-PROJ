@@ -1,0 +1,1 @@
+This repo is my submission for Web Technologies AT3 at north Metropolitan Tafe. The Aim is to design and build a Portfolio site to display and showcase my current and future coding projects.
