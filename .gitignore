@@ -1,0 +1,16 @@
+# Dependency directories
+node_modules/
+
+### Force ignore the .idea folder and all its contents
+.idea
+.idea/
+.idea/*
+.idea/**
+
+### Force ignore the .evidence folder and all its contents
+.evidence
+.evidence/
+.evidence/*
+.evidence/**
+**/.evidence/**
+**/evidence/**
