@@ -6,40 +6,57 @@
     <link rel="stylesheet" href="./assets/css/site.css">
     <title>Web Technology AT3</title>
 </head>
-<body>
-    <header>
-        <h1>Callum Hadfield</h1>
-        <nav>
-            <ul>
-                <a href="./index.html"><li>Home</li></a>
-                <a href="./about.html"><li>About</li></a>
-                <a href="./projects.html"><li>Projects</li></a>
-                <a href="./resume.html"><li>Resume</li></a>
-                <a href="./contact.html"><li>Contact</li></a>
+<body class="">
+    <header class="sticky top-0 flex flex-row justify-between p-6 text-base bg-dark-teal text-ash-grey md:text-lg">
+        <h1 class="items-center">Callum Hadfield</h1>
+        <nav class="hidden md:block">
+            <ul class="flex flex-row gap-2">
+                <a class="hover:bg-air-force-blue" href="./index.html"><li>Home</li></a>
+                <li>|</li>
+                <a class="hover:bg-air-force-blue" href="./about.html"><li>About</li></a>
+                <li>|</li>
+                <a class="hover:bg-air-force-blue" href="./projects.html"><li>Projects</li></a>
+                <li>|</li>
+                <a class="hover:bg-air-force-blue" href="./resume.html"><li>Resume</li></a>
+                <li>|</li>
+                <a class="hover:bg-air-force-blue" href="./contact.html"><li>Contact</li></a>
+            </ul>
+        </nav>
+        <nav class="block md:hidden">
+            <ul class="space-y-1.5">
+                <li class="block h-0.5 w-8 bg-ash-grey"></li>
+                <li class="block h-0.5 w-8 bg-ash-grey"></li>
+                <li class="block h-0.5 w-8 bg-ash-grey"></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <img src="./assests/img/headshot.jpg" alt="headshot">
-        <aside>
-            <h2>Callum Hadfield</h2>
-            <p>Perth, Western Australia</p>
-            <p>Certificate 4 in IT</p>
-            <p>(Programming & Web Development)</p>
+    <main class="grid grid-cols-1 grid-rows-2 md:grid-cols-2 grid-rows-none bg-beige">
+        <img class="hidden md:block row-start-auto col-start-1 pb-0" src="./assets/img/headshot.jpg" alt="headshot">
+        <img class="col-start-auto row-start-2 pb-6 justify-self-center md:hidden" src="./assets/img/headshot-mobile.jpg" alt="headshot">
+        <aside class="col-start-auto row-start-1 pb-6 md:row-start-auto col-start-2 flex flex-col items-center justify-center gap-2 pb-0">
+            <h2 class="text-4xl md:text-8xl">Callum Hadfield</h2>
+            <p class="text-lg italic md:text-2xl">Perth, Western Australia</p>
+            <p class="text-lg md:text-xl">Certificate 4 in IT</p>
+            <p class="text-lg md:text-xl">(Programming & Web Development)</p>
         </aside>
     </main>
-    <footer>
-        <section>
-            <h2>Copyright</h2>
+    <footer class="flex flex-row p-6 title-font bg-dark-teal text-ash-grey md:justify-between">
+        <span></span>
+        <section class="md:justify-center self-center">
+            <h2>© Callum Hadfield 2026</h2>
         </section>
         <section>
-            <ul>
-                <li><h2>Sitemap</h2></li>
-                <a href="./index.html"><li>Home</li></a>
-                <a href="./about.html"><li>About</li></a>
-                <a href="./projects.html"><li>Projects</li></a>
-                <a href="./resume.html"><li>Resume</li></a>
-                <a href="./contact.html"><li>Contact</li></a>
+            <ul class="flex flex-row gap-2 md:flex-col gap-0">
+                <li><h2 class="hidden">Sitemap:</h2></li>
+                <a class="hover:bg-air-force-blue" href="./index.html"><li>Home</li></a>
+                <li class="md:hidden">|</li>
+                <a class="hover:bg-air-force-blue" href="./about.html"><li>About</li></a>
+                <li class="md:hidden">|</li>
+                <a class="hover:bg-air-force-blue" href="./projects.html"><li>Projects</li></a>
+                <li class="md:hidden">|</li>
+                <a class="hover:bg-air-force-blue" href="./resume.html"><li>Resume</li></a>
+                <li class="md:hidden">|</li>
+                <a class="hover:bg-air-force-blue" href="./contact.html"><li>Contact</li></a>
             </ul>
         </section>
     </footer>
