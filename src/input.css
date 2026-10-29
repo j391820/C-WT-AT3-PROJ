@@ -1,8 +1,11 @@
+@import url('https://googleapis.com');
 @import "tailwindcss";
+@plugin "@iconify/tailwind4";
 
 @theme {
     --color-dark-teal: #124559;
     --color-air-force-blue: #598392;
     --color-ash-grey: #aec3b0;
     --color-beige: #eff6e0;
+    --font-merriweather: "Merriweather", serif;
 }
