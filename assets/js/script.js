@@ -1,5 +1,6 @@
 /* jshint esversion: 8 */
 
+// Fixes issue where pages without API would cause the code to hang here 
 if (document.getElementById('category-dropdown')) {
     // target check boxes
     const checkbox1 = document.getElementById('quote');
