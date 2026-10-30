@@ -30,26 +30,28 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <h2>Ninja API APP</h2>
-        <form>
-            <fieldset>
-                <h3>Pick from the following API's</h3>
+    <main class="bg-beige min-h-screen flex flex-col items-center content-center">
+        <h2 class="text-4xl font-merriweather font-bold pb-5">Ninja API APP</h2>
+        <form class="border-2 bg-white shadow-md rounded p-20 m-4">
+            <h3 class="block font-bold font-merriweather">Pick from the following API's</h3>
+            <fieldset class="flex flex-row items-center gap-2 pb-2">
                 <input type="checkbox" id="quote" name="quote" value="quote">
-                <label for="quote">Quotes</label>
+                <label for="quote" class="font-bold font-merriweather">Quotes</label>
                 <input type="checkbox" id="hobby" name="hobby" value="hobby">
-                <label for="hobby">Hobby</label>
+                <label for="hobby" class="font-bold font-merriweather">Hobby</label>
             </fieldset>
-            <fieldset>
-                <label for="category">Choose a category:</label>
-                <select id="category-dropdown" name="category">
+            <fieldset class="flex flex-col gap-1 pb-2">
+                <label for="category" class="font-bold font-merriweather">Choose a category:</label>
+                <select id="category-dropdown" name="category" class="border-2">
                     <option value="">Select a category</option>
                 </select>
-                <button type="button" id="getResponse">Get Response</button>
+                <br>
+                <button type="button" id="getResponse" class="bg-air-force-blue hover:bg-ash-grey text-white font-bold py-2 px-4 rounded">Get Response</button>
+                <br>
             </fieldset>
-            <fieldset>
-                <h3>Hope you like the results!</h3>
-                <p id="api-result">Click the button to get a result!</p>
+            <fieldset class="flex flex-col gap-1 pb-2">
+                <h3 class="block font-merriweather">Hope you like the results!</h3>
+                <p id="api-result" class="block font-merriweather">Click the button to get a result!</p>
             </fieldset>
         </form>
     </main>
