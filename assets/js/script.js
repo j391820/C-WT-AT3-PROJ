@@ -135,6 +135,27 @@ button.addEventListener('click', () => {
     
 });
 
+const btn = document.getElementById('hamburger-button');
+const menu = document.getElementById('mobile-menu');
+const lines = btn.querySelectorAll('span');
+
+btn.addEventListener('click', () => {
+
+    // Toggle menu
+    menu.classList.toggle('right-0');
+    menu.classList.toggle('right-[-150px]');
+
+    // Top line
+    lines[0].classList.toggle('translate-y-2');
+    lines[0].classList.toggle('rotate-45');
+
+    // Middle line
+    lines[1].classList.toggle('opacity-0');
+
+    // Bottom line
+    lines[2].classList.toggle('-translate-y-2');
+    lines[2].classList.toggle('-rotate-45');
+});
 
 
 

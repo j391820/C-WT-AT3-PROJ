@@ -41,12 +41,13 @@
                 <input type="hidden" name="redirect" value="http://127.0.0.1:5500/thankyou.html">
                 <fieldset class="flex flex-col gap-1">
                     <label for="name" class="block font-bold">Name:</label>
-                    <input type="text" id="name" name="name" class="border-2 w-full px-3 py-1.5 mb-4">
+                    <input type="text" id="name" name="name" class="border-2 w-full px-3 py-1.5 mb-4" required>
                     <label for="email" class="block font-bold">Email:</label>
-                    <input type="text" id="email" name="email" class="border-2 w-full px-3 py-1.5 mb-4">
+                    <input type="text" id="email" name="email" class="border-2 w-full px-3 py-1.5 mb-4" required>
                     <label for="message" class="block font-bold">Message:</label>
-                    <textarea class="border-2 w-full px-3 py-1.5 mb-4" id="message" name="message" rows="5" cols="40" placeholder="Type your message here..."></textarea>
+                    <textarea class="border-2 w-full px-3 py-1.5 mb-4" id="message" name="message" rows="5" cols="40" placeholder="Type your message here..." required></textarea>
                     <input class="bg-air-force-blue hover:bg-ash-grey text-white font-bold py-2 px-4 rounded" type="submit" value="Submit">
+                    <p class="hidden text-red-500 font-bold self-center">All fields are required</p>
                 </fieldset>
             </form>
         </aside>
