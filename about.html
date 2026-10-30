@@ -7,7 +7,7 @@
     <title>Web Technology AT3</title>
 </head>
 <body class="min-h-screen flex flex-col">
-    <header class="sticky top-0 flex flex-row justify-between p-6 text-base bg-dark-teal text-ash-grey md:text-lg">
+    <header class="sticky top-0 z-10 flex flex-row justify-between p-6 text-base bg-dark-teal text-ash-grey md:text-lg">
         <h1 class="items-center">Callum Hadfield</h1>
         <nav class="hidden md:block">
             <ul class="flex flex-row gap-2">
@@ -30,24 +30,32 @@
             </ul>
         </nav>
     </header>
-    <main class="bg-beige flex-grow">
-        <h2 class="text-4xl font-merriweather font-bold text-dark-teal justify-self-center pb-6 pt-6">About me</h2>
-        <section class="pb-10 pl-5">
-            <header class="flex flex-row gap-5">
-                <span class="icon-[mdi--account] text-dark-teal w-6 h-6"></span>
-                <h3 class="text-lg font-merriweather font-bold text-dark-teal">Summary</h3>
-            </header>
-            <p class="font-merriweather text-dark-teal">I'm an IT student with a passion for technology, problem-solving, and continuous learning. I enjoy understanding how things work, exploring new technologies, and developing practical solutions through hands-on projects.</p>
-            <p class="font-merriweather text-dark-teal">My studies have given me experience with programming, database development, software testing, and application development. I value writing clean, maintainable code, understanding the reasoning behind technical decisions, and continually refining my skills.</p>
-        </section>
-        <section class="pb-10 pl-5">
-            <header class="flex flex-row gap-5">
-                <span class="icon-[mdi--controller] text-dark-teal w-6 h-6"></span>
-                <h3 class="text-lg font-merriweather font-bold text-dark-teal">Hobbies & Interests</h3>
-            </header>
-            <p class="font-merriweather text-dark-teal">Outside of IT, I'm someone who enjoys learning new skills, experimenting with ideas, and working on practical projects. I have an interest in DIY, home automation, and technology-related hobbies that let me combine problem-solving with creativity.</p>
-            <p class="font-merriweather text-dark-teal">I also enjoy cooking and fermentation projects, including sourdough, kombucha, and pickling. In my downtime, I like exploring fiction and webtoons, playing board games and revisiting retro gaming, as well as getting outdoors for hikes and other adventures.</p>
-        </section>
+    <main class="bg-beige flex-grow md:grid grid-cols-2 grid-rows-[0.5fr_3fr]">
+        <h2 class="text-4xl font-merriweather font-bold justify-self-center pb-6 pt-6 md:grid-col-start-1 col-span-2 grid-row-start-1">About me</h2>
+        <figure class="relative">
+            <img class="hidden md:block grid-col-start-1 grid-row-start-2 rounded-xl" src="./assets/img/desk.jpg" alt="computer desk">
+            <figcaption class="hidden md:block absolute bottom-0 left-0 right-0 bg-black/60 backdrop-blur-sm p-4 text-white">
+                <a href="https://www.magnific.com/" target="_blank"><p class="text-sm font-semibold">© magnific</p></a>
+            </figcaption>
+        </figure>
+        <aside class="md:grid-col-start-2 grid-row-start-2">
+            <section class="pb-10 pl-5">
+                <header class="flex flex-row gap-5">
+                    <span class="icon-[mdi--account] w-6 h-6"></span>
+                    <h3 class="text-lg font-merriweather font-bold pb-1">Summary</h3>
+                </header>
+                <p class="font-merriweather">I'm an IT student with a passion for technology, problem-solving, and continuous learning. I enjoy understanding how things work, exploring new technologies, and developing practical solutions through hands-on projects.</p>
+                <p class="font-merriweather">My studies have given me experience with programming, database development, software testing, and application development. I value writing clean, maintainable code, understanding the reasoning behind technical decisions, and continually refining my skills.</p>
+            </section>
+            <section class="pb-10 pl-5 md: self-center">
+                <header class="flex flex-row gap-5">
+                    <span class="icon-[mdi--controller] w-6 h-6"></span>
+                    <h3 class="text-lg font-merriweather font-bold pb-1">Hobbies & Interests</h3>
+                </header>
+                <p class="font-merriweather pb-1">Outside of IT, I'm someone who enjoys learning new skills, experimenting with ideas, and working on practical projects. I have an interest in DIY, home automation, and technology-related hobbies that let me combine problem-solving with creativity.</p>
+                <p class="font-merriweather">I also enjoy cooking and fermentation projects, including sourdough, kombucha, and pickling. In my downtime, I like exploring fiction and webtoons, playing board games and revisiting retro gaming, as well as getting outdoors for hikes and other adventures.</p>
+            </section>
+        </aside>
     </main>
     <footer class="flex flex-row p-6 title-font bg-dark-teal text-ash-grey md:justify-between">
         <span></span>

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./assets/css/site.css">
     <title>Web Technology AT3</title>
 </head>
-<body class="min-h-screen flex flex-col">
+<body>
     <header class="sticky top-0 flex flex-row justify-between p-6 text-base bg-dark-teal text-ash-grey md:text-lg">
         <h1 class="items-center">Callum Hadfield</h1>
         <nav class="hidden md:block">
@@ -30,63 +30,65 @@
             </ul>
         </nav>
     </header>
-    <main class="bg-beige flex-grow">
-        <h2 class="text-4xl font-merriweather font-bold md:text-8xl">Callum Hadfield</h2>
-        <img class="hidden md:block row-start-auto col-start-1 pb-0" src="./assets/img/headshot.jpg" alt="headshot">
-        <section>
-            <h2>Summary</h2>
-            <p>Reliable and physically capable warehouse and operations worker with 7 years of experience in inventory management, order picking and packing, stock replenishment, stocktakes and warehouse operations. Additional experience in airside ramp operations and construction labouring, including manual handling, loading and unloading, material transport and working safely around heavy equipment. Experienced working rotating shifts, including early mornings, afternoons and late nights. Information Technology student seeking stable employment. Available for selected evenings, Thursdays, Fridays, and weekends.</p>
-        </section>
-        <article>
-            <h2>Professional Experience</h2>
-            <section>
-                <p>ABG Projects — Labourer</p>
-                <p>Secret Harbour | 2024</p>
-                <ul>
-                    <li>Prepared and maintained safe, clean construction sites, including site clean-up and daily job kit preparation.</li>
-                    <li>Transported, loaded, and unloaded building materials using company vehicles and occasional forklift operation.</li>
-                    <li>Managed tool and material inventory, collected urgent supplies, and prioritised tasks to meet job deadlines.</li>
-                </ul>
+    <main class="bg-beige flex flex-col justify-items-center md:grid grid-cols-2 grid-rows-[0.5fr_3fr_0.5fr] gap-x-8">
+        <h2 class="text-xl font-merriweather font-bold justify-self-center md:text-8xl row-start-1 col-start-1 col-span-2">Callum Hadfield</h2>
+        <img class="hidden md:block row-start-auto col-start-1 pb-0 rounded-lg" src="./assets/img/resume.jpg" alt="headshot">
+        <aside class="md:row-start-2 col-start-2">
+            <section class="pb-4">
+                <h2 class="text-lg font-bold pb-1">Summary</h2>
+                <p>Reliable and physically capable warehouse and operations worker with 7 years of experience in inventory management, order picking and packing, stock replenishment, stocktakes and warehouse operations. Additional experience in airside ramp operations and construction labouring, including manual handling, loading and unloading, material transport and working safely around heavy equipment. Experienced working rotating shifts, including early mornings, afternoons and late nights. Information Technology student seeking stable employment. Available for selected evenings, Thursdays, Fridays, and weekends.</p>
             </section>
-            <section>
-                <p>Wymap Group — Ramp Services Officer</p>
-                <p>Perth Airport | 2023-2024</p>
-                <ul>
-                    <li>Sorted, scanned, loaded, and transported passenger luggage in a secure airport environment.</li>
-                    <li>Operated tugs and baggage-handling equipment around aircraft and airside operational areas.</li>
-                    <li>Followed strict safety and security procedures while working rotating shifts and meeting tight aircraft turnaround deadlines.</li>
-                </ul>
-            </section>
-            <section>
-                <p>TVH Australia — Storeperson</p>
-                <p>Kewdale | 2015-2022</p>
-                <ul>
-                    <li>Picked, packed, and dispatched customer orders using scanning systems to ensure accuracy and timely fulfilment.</li>
-                    <li>Replenished stock, unloaded deliveries, conducted stocktakes, and maintained inventory accuracy using FIFO principles.</li>
-                    <li>Maintained a clean, safe, and organised warehouse while monitoring supplies and meeting daily productivity targets.</li>
-                </ul>
-            </section>             
-        </article>
-        <article>
-            <h2>Education</h2>
-            <section>
-                <p>Certificate IV in Information Technology (Programming)</p>
-                <p>North Metropolitan TAFE | 2026</p>
-            </section> 
-            <section>
-                <p>Certificate IV in Information Technology (Web Development)</p>
-                <p>North Metropolitan TAFE | 2026-2027</p>
-            </section>
-            <section>
-                <p>Certificate III in Information Technology</p>
-                <p>North Metropolitan TAFE | 2025</p>
-            </section>
-            <section>
-                <p>Certificate II in Auslan</p>
-                <p>North Metropolitan TAFE | 2025</p>
-            </section>
-        </article>
-        <button>Download PDF</button>
+            <article>
+                <h2 class="text-lg font-bold pb-1">Professional Experience</h2>
+                <section class="pb-2">
+                    <h3 class="font-bold">ABG Projects — Labourer</h3>
+                    <p class="italic font-light">Secret Harbour | 2024</p>
+                    <ul class="list-disc">
+                        <li>Prepared and maintained safe, clean construction sites, including site clean-up and daily job kit preparation.</li>
+                        <li>Transported, loaded, and unloaded building materials using company vehicles and occasional forklift operation.</li>
+                        <li>Managed tool and material inventory, collected urgent supplies, and prioritised tasks to meet job deadlines.</li>
+                    </ul>
+                </section>
+                <section class="pb-2">
+                    <h3 class="font-bold">Wymap Group — Ramp Services Officer</h3>
+                    <p class="italic font-light">Perth Airport | 2023-2024</p>
+                    <ul class="list-disc">
+                        <li>Sorted, scanned, loaded, and transported passenger luggage in a secure airport environment.</li>
+                        <li>Operated tugs and baggage-handling equipment around aircraft and airside operational areas.</li>
+                        <li>Followed strict safety and security procedures while working rotating shifts and meeting tight aircraft turnaround deadlines.</li>
+                    </ul>
+                </section>
+                <section class="pb-4">
+                    <h3 class="font-bold">TVH Australia — Storeperson</h3>
+                    <p class="italic font-light">Kewdale | 2015-2022</p>
+                    <ul class="list-disc">
+                        <li>Picked, packed, and dispatched customer orders using scanning systems to ensure accuracy and timely fulfilment.</li>
+                        <li>Replenished stock, unloaded deliveries, conducted stocktakes, and maintained inventory accuracy using FIFO principles.</li>
+                        <li>Maintained a clean, safe, and organised warehouse while monitoring supplies and meeting daily productivity targets.</li>
+                    </ul>
+                </section>             
+            </article>
+            <article>
+                <h2 class="text-lg font-bold pb-2">Education</h2>
+                <section class="pb-1">
+                    <h3>Certificate IV in Information Technology (Programming)</h3>
+                    <p>North Metropolitan TAFE | 2026</p>
+                </section> 
+                <section class="pb-1">
+                    <h3>Certificate IV in Information Technology (Web Development)</h3>
+                    <p class="italic">North Metropolitan TAFE | 2026-2027</p>
+                </section>
+                <section class="pb-1">
+                    <h3>Certificate III in Information Technology</h3>
+                    <p class="italic">North Metropolitan TAFE | 2025</p>
+                </section>
+                <section class="pb-4 md:pb-1">
+                    <h3>Certificate II in Auslan</h3>
+                    <p class="italic">North Metropolitan TAFE | 2025</p>
+                </section>
+            </article>
+        </aside>
+        <a href="assets/downloads/resume-callum-hadfield.pdf" download="Resume-callum-hadfield.pdf" target="_blank" class="inline-block bg-air-force-blue hover:bg-ash-grey text-white font-bold rounded self-center md:row-start-3 col-start-1 col-span-2 justify-self-center py-4 px-4">Download PDF</a>
     </main>
     <footer class="flex flex-row p-6 title-font bg-dark-teal text-ash-grey md:justify-between">
         <span></span>
