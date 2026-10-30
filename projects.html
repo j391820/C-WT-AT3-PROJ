@@ -4,29 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/site.css">
+    <script src="./assets/js/script.js" defer></script>
     <title>Web Technology AT3</title>
 </head>
 <body class="min-h-screen flex flex-col">
-    <header class="sticky top-0 flex flex-row justify-between p-6 text-base bg-dark-teal text-ash-grey md:text-lg">
+    <header class="sticky top-0 flex flex-row items-center justify-between p-6 text-base bg-dark-teal text-ash-grey md:text-lg">
         <h1 class="items-center">Callum Hadfield</h1>
         <nav class="hidden md:block">
             <ul class="flex flex-row gap-2">
-                <a class="hover:bg-air-force-blue" href="./index.html"><li>Home</li></a>
+                <a class="hover:text-air-force-blue" href="./index.html"><li>Home</li></a>
                 <li>|</li>
-                <a class="hover:bg-air-force-blue" href="./about.html"><li>About</li></a>
+                <a class="hover:text-air-force-blue" href="./about.html"><li>About</li></a>
                 <li>|</li>
-                <a class="hover:bg-air-force-blue" href="./projects.html"><li>Projects</li></a>
+                <a class="hover:text-air-force-blue" href="./projects.html"><li>Projects</li></a>
                 <li>|</li>
-                <a class="hover:bg-air-force-blue" href="./resume.html"><li>Resume</li></a>
+                <a class="hover:text-air-force-blue" href="./resume.html"><li>Resume</li></a>
                 <li>|</li>
-                <a class="hover:bg-air-force-blue" href="./contact.html"><li>Contact</li></a>
+                <a class="hover:text-air-force-blue" href="./contact.html"><li>Contact</li></a>
             </ul>
         </nav>
-        <nav class="block md:hidden">
-            <ul class="space-y-1.5">
-                <li class="block h-0.5 w-8 bg-ash-grey"></li>
-                <li class="block h-0.5 w-8 bg-ash-grey"></li>
-                <li class="block h-0.5 w-8 bg-ash-grey"></li>
+        <button id="hamburger-button" class="relative block w-8 h-8 z-50 md:hidden">
+            <span class="absolute top-1.5 left-1 w-6 h-0.5 bg-ash-grey transition-all duration-300"></span>
+            <span class="absolute top-3.5 left-1 w-6 h-0.5 bg-ash-grey transition-all duration-300"></span>
+            <span class="absolute top-5.5 left-1 w-6 h-0.5 bg-ash-grey transition-all duration-300"></span>
+        </button>
+        <nav id="mobile-menu" class="bg-beige fixed flex flex-col items-start top-0 right-[-150px] w-[150px] transition-all duration-300 md:hidden">
+            <ul>
+                <a class="text-dark-teal hover:text-air-force-blue" href="./index.html"><li>Home</li></a>
+                <a class="text-dark-teal hover:text-air-force-blue" href="./about.html"><li>About</li></a>
+                <a class="text-dark-teal hover:text-air-force-blue" href="./projects.html"><li>Projects</li></a>
+                <a class="text-dark-teal hover:text-air-force-blue" href="./resume.html"><li>Resume</li></a>
+                <a class="text-dark-teal hover:text-air-force-blue" href="./contact.html"><li>Contact</li></a>
             </ul>
         </nav>
     </header>
