@@ -249,18 +249,6 @@
   .right-\[-150px\] {
     right: -150px;
   }
-  .right-\[-200px\] {
-    right: -200px;
-  }
-  .right-\[-250px\] {
-    right: -250px;
-  }
-  .right-\[-450px\] {
-    right: -450px;
-  }
-  .right-\[-500px\] {
-    right: -500px;
-  }
   .bottom-0 {
     bottom: 0px;
   }
@@ -389,12 +377,6 @@
   .h-250 {
     height: calc(var(--spacing) * 250);
   }
-  .h-\[250px\] {
-    height: 250px;
-  }
-  .h-\[300px\] {
-    height: 300px;
-  }
   .h-full {
     height: 100%;
   }
@@ -421,18 +403,6 @@
   }
   .w-\[150px\] {
     width: 150px;
-  }
-  .w-\[200px\] {
-    width: 200px;
-  }
-  .w-\[250px\] {
-    width: 250px;
-  }
-  .w-\[300px\] {
-    width: 300px;
-  }
-  .w-\[375px\] {
-    width: 375px;
   }
   .w-full {
     width: 100%;
@@ -484,20 +454,11 @@
   .grid-rows-3 {
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
-  .grid-rows-\[0\.5fr_0\.5fr_0\.5fr\] {
-    grid-template-rows: 0.5fr 0.5fr 0.5fr;
-  }
-  .grid-rows-\[0\.5fr_1fr_0\.5fr\] {
-    grid-template-rows: 0.5fr 1fr 0.5fr;
-  }
   .grid-rows-\[0\.5fr_3fr\] {
     grid-template-rows: 0.5fr 3fr;
   }
   .grid-rows-\[0\.5fr_3fr_0\.5fr\] {
     grid-template-rows: 0.5fr 3fr 0.5fr;
-  }
-  .grid-rows-\[1fr_0\.5fr_1fr\] {
-    grid-template-rows: 1fr 0.5fr 1fr;
   }
   .grid-rows-none {
     grid-template-rows: none;
@@ -551,11 +512,6 @@
     --tw-space-y-reverse: 0;
     margin-block-start: calc(var(--spacing) * var(--tw-space-y-reverse));
     margin-block-end: calc(var(--spacing) * calc(1 - var(--tw-space-y-reverse)));
-  }
-  :where(.space-y-1\.5 > :not(:last-child)) {
-    --tw-space-y-reverse: 0;
-    margin-block-start: calc(calc(var(--spacing) * 1.5) * var(--tw-space-y-reverse));
-    margin-block-end: calc(calc(var(--spacing) * 1.5) * calc(1 - var(--tw-space-y-reverse)));
   }
   .gap-x-8 {
     column-gap: calc(var(--spacing) * 8);
@@ -815,31 +771,14 @@
     transition-duration: 300ms;
   }
   @media (hover: hover) {
-    .hover\:bg-air-force-blue:hover {
-      background-color: var(--color-air-force-blue);
-    }
     .hover\:bg-ash-grey:hover {
       background-color: var(--color-ash-grey);
-    }
-    .hover\:bg-blue-700:hover {
-      background-color: var(--color-blue-700);
     }
     .hover\:text-air-force-blue:hover {
       color: var(--color-air-force-blue);
     }
-    .hover\:text-indigo-600:hover {
-      color: var(--color-indigo-600);
-    }
-  }
-  @media (width >= 40rem) {
-    .sm\:px-3 {
-      padding-inline: calc(var(--spacing) * 3);
-    }
   }
   @media (width >= 48rem) {
-    .md\:absolute {
-      position: absolute;
-    }
     .md\:col-start-1 {
       grid-column-start: 1;
     }
@@ -878,9 +817,6 @@
     }
     .md\:justify-center {
       justify-content: center;
-    }
-    .md\:rounded-full {
-      border-radius: calc(infinity * 1px);
     }
     .md\:pb-1 {
       padding-bottom: var(--spacing);

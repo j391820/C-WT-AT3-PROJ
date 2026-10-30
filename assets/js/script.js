@@ -18,8 +18,6 @@ if (document.getElementById('category-dropdown')) {
     // default to no api selected (page first load)
     let selectedValue = "no api";
 
-
-
     // populate categories per api selected
     checkbox1.addEventListener('change', () => {
         if (checkbox1.checked) {
@@ -138,6 +136,7 @@ button.addEventListener('click', () => {
 });
 }
 
+// Mobile hamburger menu
 const btn = document.getElementById('hamburger-button');
 const menu = document.getElementById('mobile-menu');
 const lines = btn.querySelectorAll('span');
