@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <title>Web Technology AT3</title>
+</head>
+<body class="min-h-screen flex flex-col">
+    <header class="sticky top-0 z-10 flex flex-row justify-between p-6 text-base bg-dark-teal text-ash-grey md:text-lg">
+        <h1 class="items-center">Callum Hadfield</h1>
+        <nav class="hidden md:block">
+            <ul class="flex flex-row gap-2">
+                <a class="hover:bg-air-force-blue" href="./index.html"><li>Home</li></a>
+                <li>|</li>
+                <a class="hover:bg-air-force-blue" href="./about.html"><li>About</li></a>
+                <li>|</li>
+                <a class="hover:bg-air-force-blue" href="./projects.html"><li>Projects</li></a>
+                <li>|</li>
+                <a class="hover:bg-air-force-blue" href="./resume.html"><li>Resume</li></a>
+                <li>|</li>
+                <a class="hover:bg-air-force-blue" href="./contact.html"><li>Contact</li></a>
+            </ul>
+        </nav>
+        <nav class="block md:hidden">
+            <ul class="space-y-1.5">
+                <li class="block h-0.5 w-8 bg-ash-grey"></li>
+                <li class="block h-0.5 w-8 bg-ash-grey"></li>
+                <li class="block h-0.5 w-8 bg-ash-grey"></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Get in Touch</h2>
+            <p>Want to talk, ask a question, hire me?</p>
+        </section>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email">
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" cols="40" placeholder="Type your message here..."></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    <footer class="flex flex-row p-6 title-font bg-dark-teal text-ash-grey md:justify-between">
+        <span></span>
+        <section class="md:justify-center self-center">
+            <h2 class="text-xs md:text-lg">© Callum Hadfield 2026</h2>
+        </section>
+        <section>
+            <ul class="text-xs flex flex-row gap-2 md:flex-col gap-0">
+                <li><h2 class="hidden">Sitemap:</h2></li>
+                <a class="hover:bg-air-force-blue" href="./index.html"><li>Home</li></a>
+                <li class="md:hidden">|</li>
+                <a class="hover:bg-air-force-blue" href="./about.html"><li>About</li></a>
+                <li class="md:hidden">|</li>
+                <a class="hover:bg-air-force-blue" href="./projects.html"><li>Projects</li></a>
+                <li class="md:hidden">|</li>
+                <a class="hover:bg-air-force-blue" href="./resume.html"><li>Resume</li></a>
+                <li class="md:hidden">|</li>
+                <a class="hover:bg-air-force-blue" href="./contact.html"><li>Contact</li></a>
+            </ul>
+        </section>
+    </footer>
+</body>
+</html>
