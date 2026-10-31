@@ -41,99 +41,99 @@ if (document.getElementById('category-dropdown')) {
         }
 });
 
-checkbox2.addEventListener('change', () => {
-    if (checkbox2.checked) {
-    // toggle other checkbox
-    checkbox1.checked = false;
-    // clear dropdown list if click other checkbox, otherwise it adds to existing list
-    dropdown.innerHTML = '<option value="">Select a category</option>';     
-    hobbyCategories.forEach(category => {
-        let categoryOption = document.createElement("option");
-        categoryOption.text = category;
-        categoryOption.value = category;
-        dropdown.add(categoryOption);
-    // clear previous selected value if click other checkbox  
-    selectedValue = undefined;
+    checkbox2.addEventListener('change', () => {
+        if (checkbox2.checked) {
+        // toggle other checkbox
+        checkbox1.checked = false;
+        // clear dropdown list if click other checkbox, otherwise it adds to existing list
+        dropdown.innerHTML = '<option value="">Select a category</option>';     
+        hobbyCategories.forEach(category => {
+            let categoryOption = document.createElement("option");
+            categoryOption.text = category;
+            categoryOption.value = category;
+            dropdown.add(categoryOption);
+        // clear previous selected value if click other checkbox  
+        selectedValue = undefined;
+        });
+        }
+        else {
+            // reset dropdown, selected value if uncheck same checkbox
+            selectedValue = "no api";
+            dropdown.innerHTML = '<option value="">Select a category</option>';
+        }
     });
-    }
-    else {
-        // reset dropdown, selected value if uncheck same checkbox
-        selectedValue = "no api";
-        dropdown.innerHTML = '<option value="">Select a category</option>';
-    }
-});
 
 
-// Get category
-dropdown.addEventListener('change', (event) => {
-    selectedValue = event.target.value;
-});
-
-
-
-// API call
-// Hobbies
-async function getHobby(category) {
-    let result = document.getElementById("api-result");
-    result.textContent = 'Loading...';
-    const response = await fetch(`https://api.api-ninjas.com/v1/hobbies?category=${category}`, {
-    headers: { 'X-Api-Key': 'vFZfGUnl0SxsGgUctUUbif7hJHZUHJ7Udo9y29z3' }
+    // Get category
+    dropdown.addEventListener('change', (event) => {
+        selectedValue = event.target.value;
     });
-    const jsonHobbyData = await response.json();
-    try {
 
-        if (selectedValue === undefined){
-            result.textContent = 'Please select a category.';
-        }
-        else if (selectedValue === 'no api'){
-            result.textContent = 'Please select an API.';
-        }
-        else if (jsonHobbyData.hobby){
-            result.textContent = jsonHobbyData.hobby;
-        }
-        }catch(error) {
-            console.error('Error fetching hobby:', error);
-            result.textContent = 'Failed to fetch hobby.';
+
+
+    // API call
+    // Hobbies
+    const getHobby = async (category) => {
+        let result = document.getElementById("api-result");
+        result.textContent = 'Loading...';
+        const response = await fetch(`https://api.api-ninjas.com/v1/hobbies?category=${category}`, {
+        headers: { 'X-Api-Key': 'vFZfGUnl0SxsGgUctUUbif7hJHZUHJ7Udo9y29z3' }
+        });
+        const jsonHobbyData = await response.json();
+        try {
+
+            if (selectedValue === undefined){
+                result.textContent = 'Please select a category.';
             }
-}
-
-// Quotes
-async function getQuote(category) {
-    let result = document.getElementById("api-result");
-    result.textContent = 'Loading...';
-    const response = await fetch(`https://api.api-ninjas.com/v2/quotes?categories=${category}`, {
-    headers: { 'X-Api-Key': 'vFZfGUnl0SxsGgUctUUbif7hJHZUHJ7Udo9y29z3' }
-    });
-    const jsonQuoteData = await response.json();
-    try {
-        if (selectedValue === undefined){
-            result.textContent = 'Please select a category';
-            }
-        else if (selectedValue === 'no api'){
+            else if (selectedValue === 'no api'){
                 result.textContent = 'Please select an API.';
-        }    
-        else if (jsonQuoteData.length > 0){
-                result.textContent = jsonQuoteData[0].quote;
-        }
-        }catch(error) {
-            console.error('Error fetching hobby:', error);
-            result.textContent = 'Failed to fetch hobby.';
             }
-}
+            else if (jsonHobbyData.hobby){
+                result.textContent = jsonHobbyData.hobby;
+            }
+            }catch(error) {
+                console.error('Error fetching hobby:', error);
+                result.textContent = 'Failed to fetch hobby.';
+                }
+    };
+
+    // Quotes
+    const getQuote = async (category) => {
+        let result = document.getElementById("api-result");
+        result.textContent = 'Loading...';
+        const response = await fetch(`https://api.api-ninjas.com/v2/quotes?categories=${category}`, {
+        headers: { 'X-Api-Key': 'vFZfGUnl0SxsGgUctUUbif7hJHZUHJ7Udo9y29z3' }
+        });
+        const jsonQuoteData = await response.json();
+        try {
+            if (selectedValue === undefined){
+                result.textContent = 'Please select a category';
+                }
+            else if (selectedValue === 'no api'){
+                    result.textContent = 'Please select an API.';
+            }    
+            else if (jsonQuoteData.length > 0){
+                    result.textContent = jsonQuoteData[0].quote;
+            }
+            }catch(error) {
+                console.error('Error fetching hobby:', error);
+                result.textContent = 'Failed to fetch hobby.';
+                }
+    };
 
 
-// button
-const button = document.getElementById("getResponse");
+    // button
+    const button = document.getElementById("getResponse");
 
-button.addEventListener('click', () => {
-    if (quoteCategories.includes(selectedValue)){
-        getQuote(selectedValue); 
-    }
-    else {
-        getHobby(selectedValue);
-    }
-    
-});
+    button.addEventListener('click', () => {
+        if (quoteCategories.includes(selectedValue)){
+            getQuote(selectedValue); 
+        }
+        else {
+            getHobby(selectedValue);
+        }
+        
+    });
 }
 
 // Mobile hamburger menu
@@ -203,7 +203,7 @@ if (document.getElementById('contact-form')) {
                 messageError.classList.add('hidden');    
             }
         return isValid;
-    }
+    };
 }
 
 
