@@ -1,4 +1,4 @@
-@import url('https://googleapis.com');
+@import url("https://googleapis.com");
 @import "tailwindcss";
 @plugin "@iconify/tailwind4";
 
@@ -10,5 +10,4 @@
     
     --font-questrial: "Questrial", sans-serif;
     --font-roboto: "Roboto", sans-serif;
-    --font-comfortaa: "Comfortaa", sans-serif;
 }
