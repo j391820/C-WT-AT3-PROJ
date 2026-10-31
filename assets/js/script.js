@@ -159,6 +159,52 @@ btn.addEventListener('click', () => {
     lines[2].classList.toggle('-rotate-45');
 });
 
+// Fixes issue where pages without contact form would cause the code to hang here 
+if (document.getElementById('contact-form')) {
+    // Contact form validation
+    let myForm = document.getElementById('contact-form');
+    let username = document.getElementById('name');
+    let email = document.getElementById('email');
+    let message = document.getElementById('message');
+    let nameError = document.getElementById('name-error');
+    let emailError = document.getElementById('email-error');
+    let messageError = document.getElementById('message-error');
+
+    myForm.addEventListener('submit', e =>{
+        if (!validateInputs()) {
+                e.preventDefault();
+            }
+    });
+
+    const validateInputs = () => {
+        const usernameValue = username.value.trim();
+        const emailValue = email.value.trim();
+        const messageValue = message.value.trim();
+        let isValid = true;
+
+        if(usernameValue === ''){
+                nameError.classList.remove('hidden');
+                isValid = false; 
+            } else{
+                nameError.classList.add('hidden');    
+            }
+            
+            if(emailValue === '') {
+                emailError.classList.remove('hidden');
+                isValid = false; 
+            } else{
+                emailError.classList.add('hidden');    
+            }
+            
+            if(messageValue === ''){
+                messageError.classList.remove('hidden'); 
+                isValid = false;
+            } else{
+                messageError.classList.add('hidden');    
+            }
+        return isValid;
+    }
+}
 
 
 

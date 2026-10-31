@@ -44,18 +44,20 @@
             <p class="text-xl font-['Roboto'] md:text-3xl">Want to talk, ask a question, hire me?</p>
         </section>
         <aside class="md:col-start-2 justify-items-center content-center gap-5">
-            <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action="https://api.web3forms.com/submit" method="POST">
+            <form id="contact-form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="0db2cc6a-219d-4f85-95aa-dc8c5260b73f">
                 <input type="hidden" name="redirect" value="https://j391820.github.io/C-WT-AT3-PROJ/thankyou.html">
                 <fieldset class="flex flex-col gap-1">
                     <label for="name" class="block font-bold">Name:</label>
-                    <input type="text" id="name" name="name" class="border-2 w-full px-3 py-1.5 mb-4" required>
+                    <input type="text" id="name" name="name" class="border-2 w-full px-3 py-1.5 mb-4">
+                    <p id="name-error" class="hidden text-red-500 font-bold self-center">Name is required</p>
                     <label for="email" class="block font-bold">Email:</label>
-                    <input type="text" id="email" name="email" class="border-2 w-full px-3 py-1.5 mb-4" required>
+                    <input type="text" id="email" name="email" class="border-2 w-full px-3 py-1.5 mb-4">
+                    <p id="email-error" class="hidden text-red-500 font-bold self-center">Email is required</p>
                     <label for="message" class="block font-bold">Message:</label>
-                    <textarea class="border-2 w-full px-3 py-1.5 mb-4" id="message" name="message" rows="5" cols="40" placeholder="Type your message here..." required></textarea>
+                    <textarea class="border-2 w-full px-3 py-1.5 mb-4" id="message" name="message" rows="5" cols="40" placeholder="Type your message here..."></textarea>
+                    <p id="message-error" class="hidden text-red-500 font-bold self-center">Message cannot be blank</p>
                     <input class="bg-air-force-blue hover:bg-ash-grey text-white font-bold py-2 px-4 rounded" type="submit" value="Submit">
-                    <p class="hidden text-red-500 font-bold self-center">All fields are required</p>
                 </fieldset>
             </form>
         </aside>
