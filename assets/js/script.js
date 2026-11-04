@@ -170,6 +170,7 @@ if (document.getElementById('contact-form')) {
     let emailError = document.getElementById('email-error');
     let messageError = document.getElementById('message-error');
 
+    debugger;
     myForm.addEventListener('submit', e =>{
         if (!validateInputs()) {
                 e.preventDefault();
@@ -181,30 +182,46 @@ if (document.getElementById('contact-form')) {
         const emailValue = email.value.trim();
         const messageValue = message.value.trim();
         let isValid = true;
+        const validName = /^[A-Za-z\s]{2,}$/;
+        const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const validMessage = /^[A-Za-z0-9\s.,!?'"()-]{1,200}$/;
 
+        debugger;
         if(usernameValue === ''){
-                nameError.classList.remove('hidden');
+                nameError.textContent ='Name is required';
                 isValid = false; 
-            } else{
-                nameError.classList.add('hidden');    
-            }
+            } else if(!validName.test(usernameValue))
+                {
+                    nameError.textContent ='A valid name is required';
+                    isValid = false; 
+                } else {
+                    nameError.textContent = '';
+                }      
             
             if(emailValue === '') {
-                emailError.classList.remove('hidden');
+                emailError.textContent = 'Email is required';
                 isValid = false; 
-            } else{
-                emailError.classList.add('hidden');    
+            } else if (!validEmail.test(emailValue)) {
+                emailError.textContent = 'A valid email is required';
+                isValid = false;     
+            } else {
+                emailError.textContent = '';
             }
             
             if(messageValue === ''){
-                messageError.classList.remove('hidden'); 
+                messageError.textContent = 'Message cannot be blank' 
                 isValid = false;
-            } else{
-                messageError.classList.add('hidden');    
+            } else if (!validMessage.test(messageValue)) {
+                messageError.textContent = 'Message must be less than 200 characters' 
+                isValid = false;
+            } else {
+                messageError.textContent = '';
             }
+
         return isValid;
     };
 }
+
 
 
 
