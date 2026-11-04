@@ -170,7 +170,6 @@ if (document.getElementById('contact-form')) {
     let emailError = document.getElementById('email-error');
     let messageError = document.getElementById('message-error');
 
-    debugger;
     myForm.addEventListener('submit', e =>{
         if (!validateInputs()) {
                 e.preventDefault();
@@ -182,11 +181,13 @@ if (document.getElementById('contact-form')) {
         const emailValue = email.value.trim();
         const messageValue = message.value.trim();
         let isValid = true;
+        // name must be at least two alphabetic characters
         const validName = /^[A-Za-z\s]{2,}$/;
+        // email must contain @ and .Domain
         const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        // Message must be less then 200 characters but can contain different characters
         const validMessage = /^[A-Za-z0-9\s.,!?'"()-]{1,200}$/;
 
-        debugger;
         if(usernameValue === ''){
                 nameError.textContent ='Name is required';
                 isValid = false; 
@@ -209,10 +210,10 @@ if (document.getElementById('contact-form')) {
             }
             
             if(messageValue === ''){
-                messageError.textContent = 'Message cannot be blank' 
+                messageError.textContent = 'Message cannot be blank'; 
                 isValid = false;
             } else if (!validMessage.test(messageValue)) {
-                messageError.textContent = 'Message must be less than 200 characters' 
+                messageError.textContent = 'Message must be less than 200 characters'; 
                 isValid = false;
             } else {
                 messageError.textContent = '';
